@@ -11,11 +11,11 @@ The primary visualiser exposes the observation time, initial velocity, velocity 
 
 | File | Purpose |
 |---|---|
-| `rad.py` | Primary interactive visualiser and command-line snapshot generator. It blends the pre- and post-acceleration uniform-velocity fields across the causal transition region. |
-| `bruhemstrahlung.py` | Field-line kink geometry using relativistic angular mapping for a brief acceleration event. |
-| `cold.py` | Spacetime diagram of the charge worldline and the light cones emitted at the start and end of acceleration. |
-| `pasta.py` | Liénard–Wiechert electric-field study with a numerical retarded-time solve. |
-| `rice.py` | Alternate Liénard–Wiechert field study with exact and concentric shell displays. |
+| `accelerated_charge_visualiser.py` | Primary interactive visualiser and command-line snapshot generator. It blends the pre- and post-acceleration uniform-velocity fields across the causal transition region. |
+| `field_line_kink_geometry.py` | Field-line kink geometry using relativistic angular mapping for a brief acceleration event. |
+| `charge_worldline_diagram.py` | Spacetime diagram of the charge worldline and the light cones emitted at the start and end of acceleration. |
+| `lienard_wiechert_field.py` | Liénard–Wiechert electric-field study with a numerical retarded-time solve. |
+| `lienard_wiechert_shell_comparison.py` | Alternate Liénard–Wiechert field study with exact and concentric shell displays. |
 | `rad_states.png` | Three-state position diagram used while reasoning about the motion. |
 | `rad_notes_diagram.png` | Geometric construction of the expanding radiation shell. |
 
@@ -27,7 +27,7 @@ Requires Python 3.10 or later.
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-python rad.py
+python accelerated_charge_visualiser.py
 ```
 
 The sliders control:
@@ -41,7 +41,7 @@ The sliders control:
 Generate a snapshot without opening a window:
 
 ```bash
-MPLBACKEND=Agg python rad.py \
+MPLBACKEND=Agg python accelerated_charge_visualiser.py \
   --output radiation_visualiser.png \
   --no-show
 ```
@@ -49,7 +49,7 @@ MPLBACKEND=Agg python rad.py \
 The other scripts are standalone interactive studies. For example:
 
 ```bash
-python pasta.py
+python lienard_wiechert_field.py
 ```
 
 ## Model
