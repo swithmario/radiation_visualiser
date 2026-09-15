@@ -53,3 +53,16 @@ The naming change also makes four Matplotlib math strings explicit raw strings.
 Next, add independent analytical checks before making quantitative radiation
 claims. Keep qualitative illustrations labelled as such. State Mac Mini M4 in
 commits made on this machine.
+
+## Documentation and Git identity
+
+Use first person for personal decisions and experience in README prose. Use
+direct technical language for software behaviour and instructions. Do not
+describe the maintainer as "the owner". Preserve quoted source wording and
+technical ownership terms.
+
+Local commits must use `swithmario` and
+`28229111+swithmario@users.noreply.github.com`. Verify both author and committer
+before pushing. Histories were corrected on 15SEP2026; compare an older checkout
+with the corrected remote before merging or pushing it. Record Mac Mini M4 in
+commits made on this machine.
