@@ -26,8 +26,8 @@ def main():
     # Note: speed of light c = 1.0
     s_t    = Slider(ax_t, 'Time ($t$)', 0.0, 20.0, valinit=9.0)
     s_v    = Slider(ax_v, 'Velocity ($v$)', 0.0, 0.95, valinit=0.0)
-    s_dv   = Slider(ax_dv, '$\Delta v$', -0.9, 0.9, valinit=0.8)
-    s_dt   = Slider(ax_dt, 'Duration ($\Delta t$)', 0.1, 3.0, valinit=0.8)
+    s_dv   = Slider(ax_dv, r'$\Delta v$', -0.9, 0.9, valinit=0.8)
+    s_dt   = Slider(ax_dt, r'Duration ($\Delta t$)', 0.1, 3.0, valinit=0.8)
     s_tacc = Slider(ax_tacc, 'Start Accel ($t_{acc}$)', 0.0, 5.0, valinit=2.0)
 
     # Number of field lines to draw (determines flux density)
@@ -141,8 +141,8 @@ def main():
 
         # Update text
         ax.set_title(f"Radiation Geometry (t = {t:.2f})\n"
-                     f"$v_0 = {v0:.2f}$  ($\gamma_0 = {gamma0:.2f}$)  |  "
-                     f"$v_1 = {v1:.2f}$  ($\gamma_1 = {gamma1:.2f}$)", fontsize=13)
+                     fr"$v_0 = {v0:.2f}$  ($\gamma_0 = {gamma0:.2f}$)  |  "
+                     fr"$v_1 = {v1:.2f}$  ($\gamma_1 = {gamma1:.2f}$)", fontsize=13)
 
         fig.canvas.draw_idle()
 
